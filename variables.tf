@@ -20,7 +20,7 @@ variable "igw_tags" {
     default = {}
 }
 
-variable "var.public_subnet_cidr" {
+variable "public_subnet_cidr" {
     type =list
     default = ["lo.0.1.0/24" , "10.0.2.0/24"]
 }
