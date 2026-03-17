@@ -14,10 +14,10 @@ resource "aws_internet_gateway" "gw" {
 
  # public subnet
 resource "aws_subnet" "public" {
-  count = lenght(var.public_subnet_cidr)
+ count = length(var.public_subnet_cidr)
   vpc_id     = aws_vpc.main.id
   cidr_block = var.public_subnet_cidr[count.index]
-  aws_availability_zones = local.AZ_names[count.index]
+  aws_availability_zone = local.AZ_names[count.index]
   map_public_ip_on_launch = true 
   # to get public address
 
