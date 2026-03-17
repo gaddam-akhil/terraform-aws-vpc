@@ -11,3 +11,14 @@ resource "aws_internet_gateway" "gw" {
 
   tags = local.igw_final_tags
 }
+
+/* # public subnet
+resource "aws_subnet" "public" {
+  count = lenght(var.public_subnet_cidr)
+  vpc_id     = aws_vpc.main.id
+  cidr_block = var.public_subnet_cidr(count.index)
+
+  tags = {
+    Name = "Main"
+  }
+} */
