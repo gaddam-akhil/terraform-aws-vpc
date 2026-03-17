@@ -7,10 +7,9 @@ variable "environment" {
 }
 
 variable "vpc_cidr" {
-    type = string 
-    default = {}
+  type    = string
+  default = "10.0.0.0/16" # Use a string here
 }
-
 variable "vpc_tags" {
     type = map
     default = {}
