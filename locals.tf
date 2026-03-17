@@ -17,7 +17,7 @@ locals {
         {
             Name = "${var.project}-${var.environment}"
         },
-           var.igw_tags
+           var.igw_tags,
    AZ_names = slice(data.aws_availability_zones.available.names , 0, 2 )
   )
 } 
