@@ -72,7 +72,7 @@ resource "aws_route_table" "public" {
         local.common_tags,
         {
             #roboshop-public
-            Name = "${var.project}-${var.environment}-public-${local.AZ_names[count.index]}"
+            Name = "${var.project}-${var.environment}-public"
         },
            var.public_route_subnet_tags
   )
@@ -85,7 +85,7 @@ resource "aws_route_table" "private" {
         local.common_tags,
         {
             #roboshop-private
-            Name = "${var.project}-${var.environment}-private-${local.AZ_names[count.index]}"
+            Name = "${var.project}-${var.environment}-private"
         },
            var.private_route_subnet_tags
   )
@@ -98,7 +98,7 @@ resource "aws_route_table" "database" {
         local.common_tags,
         {
             #roboshop-database
-            Name = "${var.project}-${var.environment}-database-${local.AZ_names[count.index]}"
+            Name = "${var.project}-${var.environment}-database"
         },
            var.database_route_subnet_tags
   )
