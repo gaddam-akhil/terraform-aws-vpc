@@ -64,3 +64,14 @@ variable "database_subnet_tags" {
     type = map
     default = {}
  }
+
+#optional user can override this variables
+ variable "eip_tags" {
+    type = map
+    default = {}
+ }
+
+ variable "nat_tags" {
+    type = map
+    default = {}
+ }
