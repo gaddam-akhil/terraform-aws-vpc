@@ -1,4 +1,5 @@
-resource "aws_vpc_peering_connection" "defauklt" {
+resource "aws_vpc_peering_connection" "default" {
+  count = var.Is_peering_required ? 1 : 0
   
   # Acceptor
   peer_vpc_id   = data.aws_vpc.default.id
@@ -15,4 +16,12 @@ resource "aws_vpc_peering_connection" "defauklt" {
   requester {
     allow_remote_vpc_dns_resolution = true
   }
+
+  tags = merge(
+        local.common_tags,
+        {
+            #roboshop-dev-default
+            Name = "${var.project}-${var.environment}-default"
+        }
+  )
 }
