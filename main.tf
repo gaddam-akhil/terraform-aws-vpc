@@ -112,7 +112,7 @@ resource "aws_route" "public" {
 }
 
 # we are creating elastic ip not associating 
-resource "aws_eip" "one" {
+resource "aws_eip" "nat" {
   domain                    = "vpc"
 
   tags =  merge(
