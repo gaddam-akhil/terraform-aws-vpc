@@ -75,3 +75,8 @@ variable "database_subnet_tags" {
     type = map
     default = {}
  }
+
+ variable "Is_peering_required" {
+    type = bool
+    default = false
+ }
