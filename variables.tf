@@ -50,17 +50,17 @@ variable "database_subnet_tags" {
     default = {}
 }
 
- variable "var.public_route_subnet_tags" {
+ variable "public_route_subnet_tags" {
     type = map
     default = {}
  }
 
- variable "var.private_route_subnet_tags" {
+ variable "private_route_subnet_tags" {
     type = map
     default = {}
  }
 
- variable "var.database_route_subnet_tags" {
+ variable "database_route_subnet_tags" {
     type = map
     default = {}
  }
